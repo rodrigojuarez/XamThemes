@@ -1,0 +1,27 @@
+﻿<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="XamThemes.App">
+    <Application.Resources>
+        
+        <!--Colors-->
+        <!--Light Colors-->
+        <Color x:Key="BackgroundLight">#2196F3</Color>
+        <Color x:Key="TextLight">Black</Color>
+        
+        <!--Dark Colors-->
+        <Color x:Key="BackgroundDark">#1d1d1d</Color>
+        <Color x:Key="TextDark">White</Color>
+        
+        <!--Styles-->
+        <Style x:Key="ContainerBackgroundColor" 
+               TargetType="StackLayout">
+            <Setter Property="BackgroundColor" Value="{AppThemeBinding Dark={StaticResource BackgroundDark}, Light={StaticResource BackgroundLight}}"/>
+        </Style>
+        
+        <Style x:Key="TextColor"
+               TargetType="Label">
+            <Setter Property="TextColor" Value="{AppThemeBinding Dark={StaticResource TextDark}, Light={StaticResource TextLight}}"/>
+        </Style>
+
+    </Application.Resources>
+</Application>
